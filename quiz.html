@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Ético | IA, Ética e Futuro</title>
+    <link rel="stylesheet" href="pesqui.css">
+</head>
+<style>
+    body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, rgba(12, 12, 22, 0.95) 0%, rgba(26, 24, 69, 0.85) 50%, rgba(45, 39, 100, 0.95) 100%),
+                url('./imagens/image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text-white);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    }
+
+    body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(65, 54, 195, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(135, 163, 247, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+</style>
+<body>
+    <header>
+<div class="logo">
+    <img src="./imagens/logo.png" alt="SNCT 2025" />
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pesqui.html">Pesquisa</a></li>
+                <li><a href="quiz.html" class="active">Quiz Ético</a></li>
+                <li><a href="ia.html">Deepfakes</a></li>
+                <li><a href="emprego.html">Empregos</a></li>
+                <li><a href="det.html">Jogos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <h1>Quiz Ético sobre IA</h1>
+            <p style="color: #8b95c9; font-size: 1.2rem;">Teste seus conhecimentos sobre os dilemas éticos da Inteligência Artificial</p>
+        </div>
+
+        <div class="quiz-layout">
+            <div class="quiz-container" id="quizContainer">
+            </div>
+
+            <div class="score-sidebar">
+                <div class="score-card correct-card">
+                    <div class="score-number" id="correctScore">0</div>
+                    <div class="score-label">Acertos</div>
+                </div>
+                <div class="score-card wrong-card">
+                    <div class="score-number" id="wrongScore">0</div>
+                    <div class="score-label">Erros</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-screen" id="resultScreen">
+            <h2 style="color: #00d9ff; font-size: 2.5rem; margin-bottom: 2rem;">Quiz Finalizado!</h2>
+            <div class="result-score" id="finalScore">0/5</div>
+            <div class="result-message" id="resultMessage"></div>
+            <div class="prize-message" id="prizeMessage" style="display: none;">
+                PARABÉNS! Você acertou todas as perguntas!
+            </div>
+            <button class="btn" onclick="location.reload()">Tentar Novamente</button>
+            <button class="btn" onclick="location.href='quiz.html'" style="background: linear-gradient(135deg, #7b2ff7 0%, #00d9ff 100%); margin-left: 1rem;">Voltar ao Início</button>
+        </div>
+    </div>
+
+       
+<footer>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="pesqui.html">Pesquisa</a></li>
+    <li><a href="quiz.html">Quiz Ético</a></li>
+    <li><a href="ia.html">Deepfakes</a></li>
+    <li><a href="emprego.html">Empregos</a></li>
+    <li><a href="det.html">Jogos</a></li>
+    <li><a href="sobre.html">Sobre nosso Grupo</a></li>
+    <li><a href="fontes.html">Referências bibliográficas</a></li>
+  </ul>
+  <p>© 2025 SNCT | IA, Ética e Futuro do Trabalho</p>
+</footer>
+<script src="./src/js/quiz.js"></script>
+<script src="./src/js/fotter.js"></script>
+</body>
+</html>
+
+    </body>
+</html

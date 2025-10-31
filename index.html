@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início | IA SNCT 2025</title>
+    <link rel="stylesheet" href="pesqui.css">
+</head>
+<style>
+    body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, rgba(12, 12, 22, 0.95) 0%, rgba(26, 24, 69, 0.85) 50%, rgba(45, 39, 100, 0.95) 100%),
+                url('./imagens/image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text-white);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 0px;
+    }
+
+    body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(65, 54, 195, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(135, 163, 247, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+</style>
+    <header>
+        <div class="logo">
+            <img src="./imagens/logo.png" alt="SNCT 2025" />
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="pesqui.html">Pesquisa</a></li>
+                <li><a href="quiz.html">Quiz Ético</a></li>
+                <li><a href="ia.html">Deepfakes</a></li>
+                <li><a href="emprego.html">Empregos</a></li>
+                <li><a href="det.html">Jogos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section class="carousel-section">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <div class="slide-content">
+                <span class="slide-tag">Caso Real #01</span>
+                <h2>Robert Williams: Preso por Erro de IA</h2>
+                <p>Detroit, 2020. Um homem negro passou 30 horas preso porque um sistema de reconhecimento facial o identificou erroneamente como criminoso. Ele estava no trabalho quando o crime ocorreu.</p>
+                <div>Taxa de erro para mulheres negras: <span class="highlight">35% maior</span></div>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <span class="slide-tag">Caso Real #02</span>
+                <h2>Amazon: IA Sexista no Recrutamento</h2>
+                <p>2018. A Amazon abandonou seu sistema de IA para avaliar currículos após descobrir que discriminava sistematicamente mulheres, penalizando a palavra "mulher" e universidades femininas.</p>
+                <div>Sistema treinado com <span class="highlight">10 anos</span> de dados enviesados</div>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <span class="slide-tag">Caso Real #03</span>
+                <h2>Uber: Morte por Carro Autônomo</h2>
+                <p>Arizona, 2018. Uma pedestre foi morta por carro autônomo da Uber. O sistema a classificou como "objeto desconhecido", depois "veículo", depois "bicicleta". Quem é o responsável?</p>
+                <div>Responsabilidade: <span class="highlight">Difusa e não resolvida</span></div>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <span class="slide-tag">Caso Real #04</span>
+                <h2>COMPAS: Justiça Algorítmica Racista</h2>
+                <p>EUA. Sistema usado em tribunais classificava réus negros como "alto risco" com frequência 2x maior que brancos, mesmo com fichas criminais idênticas.</p>
+                <div>Falsos positivos para negros: <span class="highlight">45%</span> vs 23% brancos</div>
+            </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="slide-content">
+                <span class="slide-tag">Caso Real #05</span>
+                <h2>Deepfake: Fraude de US$ 243 Mil</h2>
+                <p>Criminosos usaram deepfake de voz do CEO para convencer gerente financeiro a transferir dinheiro. O gerente estava convencido de estar falando com seu chefe real.</p>
+                <div>Deepfakes pornográficos: <span class="highlight">90%</span> vitimizam mulheres</div>
+            </div>
+        </div>
+
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+            <span class="indicator" data-slide="4"></span>
+        </div>
+    </div>
+</section>
+
+<section id="contador" class="container">
+  <div class="header">
+    <p class="hero-subtitle">O impacto está acontecendo AGORA</p>
+  </div>
+
+<div class="counter-grid">
+    <div class="counter-card">
+      <div class="counter-icon">💼</div>
+      <div class="counter-number" data-target="3472" data-increment="0.35">0</div>
+      <div class="counter-label">Empregos perdidos hoje</div>
+      <div class="counter-sublabel">~250/hora globalmente</div>
+    </div>
+
+    <div class="counter-card">
+      <div class="counter-icon">💧</div>
+      <div class="counter-number" data-target="125600" data-increment="12.5">0</div>
+      <div class="counter-label">Litros de água gastos (L)</div>
+      <div class="counter-sublabel">Por data centers de IA agora</div>
+    </div>
+
+    <div class="counter-card">
+      <div class="counter-icon">🌍</div>
+      <div class="counter-number" data-target="45280" data-increment="4.3">0</div>
+      <div class="counter-label">Kg de CO₂ emitidos</div>
+      <div class="counter-sublabel">Por consultas de IA neste momento</div>
+    </div>
+
+    <div class="counter-card">
+      <div class="counter-icon">💬</div>
+      <div class="counter-number" data-target="18500000" data-increment="1200">0</div>
+      <div class="counter-label">Interações com ChatGPT</div>
+      <div class="counter-sublabel">Acontecendo agora</div>
+    </div>
+
+    <!-- DEEPFAKE CENTRALIZADO -->
+    <div class="counter-card" style="grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
+      <div class="counter-icon">🎭</div>
+      <div class="counter-number" data-target="847" data-increment="0.8">0</div>
+      <div class="counter-label">Deepfakes criados hoje</div>
+      <div class="counter-sublabel">90% são pornográficos</div>
+    </div>
+  </div>
+  
+  <div class="counter-footer">
+    <p>⚠️ Estes números aumentam a cada segundo. O impacto da IA não é futuro - é AGORA.</p>
+  </div>
+</section>
+<footer>
+        <p>© 2025 SNCT | IA, Ética e Futuro do Trabalho</p>
+        <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pesqui.html">Pesquisa</a></li>
+                <li><a href="quiz.html">Quiz Ético</a></li>
+                <li><a href="ia.html" class="active">Deepfakes</a></li>
+                <li><a href="emprego.html">Empregos</a></li>
+                <li><a href="det.html">Jogos</a></li>
+                <li><a href="sobre.html">Sobre nosso Grupo</a></li>
+                <li><a href="fontes.html">Referencias bibliografica</a></li>
+            </ul>
+    </footer>
+</body>
+</html>
+
+<script src="./src/js/fotter.js"></script>
+    <script src="./src/js/index.js"></script>
+</body>
+
+
+</html>

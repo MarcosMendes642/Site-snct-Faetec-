@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfakes | IA, Ética e Futuro</title>
+    <link rel="stylesheet" href="pesqui.css">
+</head>
+<style>
+    body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, rgba(12, 12, 22, 0.95) 0%, rgba(26, 24, 69, 0.85) 50%, rgba(45, 39, 100, 0.95) 100%),
+                url('./imagens/image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text-white);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    }
+
+    body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(65, 54, 195, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(135, 163, 247, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+    <img src="./imagens/logo.png" alt="SNCT 2025" />
+</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pesqui.html">Pesquisa</a></li>
+                <li><a href="quiz.html">Quiz Ético</a></li>
+                <li><a href="ia.html" class="active">Deepfakes</a></li>
+                <li><a href="emprego.html">Empregos</a></li>
+                <li><a href="det.html">Jogos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <h1>Real vs Fake: Você Consegue Identificar?</h1>
+            <p style="color: #8b95c9; font-size: 1.2rem;">Teste sua capacidade de distinguir imagens reais de deepfakes gerados por IA</p>
+        </div>
+
+        <div class="info-box">
+            <h3>COMO FUNCIONA</h3>
+            <p>
+                Abaixo estão 10 imagens. Algumas são REAIS (fotografias de pessoas reais) e outras são DEEPFAKES (rostos gerados por IA que nunca existiram).
+                <br><br>
+                <strong>Seu desafio:</strong> Vote se cada imagem é REAL ou FAKE. Depois de votar, você verá a resposta correta e aprenderá dicas para identificar deepfakes.
+                <br><br>
+                <strong style="color: #ff3232;">AVISO:</strong> Deepfakes são tão realistas que até especialistas erram. Esta é a ameaça real da IA generativa.
+            </p>
+        </div>
+
+        <div class="score-display">
+            <div class="score-item">
+                <div class="score-number" id="correctCount">0</div>
+                <div class="score-label">Acertos</div>
+            </div>
+            <div class="score-item">
+                <div class="score-number" id="wrongCount">0</div>
+                <div class="score-label">Erros</div>
+            </div>
+        </div>
+
+        <div class="gallery-grid" id="gallery">
+            <!-- Imagens serão inseridas aqui via JavaScript -->
+        </div>
+
+        <div class="final-results" id="finalResults">
+            <h2 style="color: #00d9ff; font-size: 2.5rem; margin-bottom: 1rem;">Teste Completo!</h2>
+            <div class="final-score" id="finalScore">0/10</div>
+            <p style="font-size: 1.5rem; color: #8b95c9; margin-bottom: 2rem;" id="finalMessage"></p>
+            <button class="vote-btn real" onclick="location.reload()" style="max-width: 300px; margin: 0 auto; border-color: #00d9ff; color: #00d9ff; background: rgba(0, 217, 255, 0.1); border: 2px solid #00d9ff; border-radius: 12px; padding: 1.2rem 2.5rem;">
+                Tentar Novamente
+            </button>
+        </div>
+
+        <div class="warning-box">
+            <h3>POR QUE ISSO É PERIGOSO?</h3>
+            <ul>
+                <li><strong>Pornografia não-consensual:</strong> 90% das vítimas de deepfakes pornô são mulheres</li>
+                <li><strong>Fraudes financeiras:</strong> Deepfake de CEO enganou empresa e roubou US$ 243 mil</li>
+                <li><strong>Manipulação política:</strong> Vídeos falsos de políticos podem influenciar eleições</li>
+                <li><strong>Destruição de reputação:</strong> Impossível provar que um vídeo é falso rapidamente</li>
+                <li><strong>Fim da verdade objetiva:</strong> "Eu vi com meus próprios olhos" não é mais prova</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 SNCT | IA, Ética e Futuro do Trabalho</p>
+        <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pesqui.html">Pesquisa</a></li>
+                <li><a href="quiz.html">Quiz Ético</a></li>
+                <li><a href="ia.html" class="active">Deepfakes</a></li>
+                <li><a href="emprego.html">Empregos</a></li>
+                <li><a href="det.html">Jogos</a></li>
+                <li><a href="sobre.html">Sobre nosso Grupo</a></li>
+                <li><a href="fontes.html">Referencias bibliografica</a></li>
+            </ul>
+    </footer>
+</body>
+</html>
+<script src="./src/js/fotter.js"></script>
+        <script src="./src/js/ia.js"></script>
+</body>
+</html>

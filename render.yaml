@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: ia-etica
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+    routes:
+      # Redireciona a raiz para pesqui.html
+      - type: rewrite
+        source: /
+        destination: /pesqui.html
+
+      # Garante que todas as outras páginas funcionem
+      - type: rewrite
+        source: /ia
+        destination: /ia.html
+      - type: rewrite
+        source: /quiz
+        destination: /quiz.html
+      - type: rewrite
+        source: /empr
+        destination: /empr.html
+      - type: rewrite
+        source: /pesqui
+        destination: /pesqui.html

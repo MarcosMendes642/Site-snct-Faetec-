@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA, Ética e Futuro do Trabalho | SNCT 2025</title>
+    <link rel="stylesheet" href="pesqui.css">
+</head>
+<style>
+    body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, rgba(12, 12, 22, 0.95) 0%, rgba(26, 24, 69, 0.85) 50%, rgba(45, 39, 100, 0.95) 100%),
+                url('./imagens/image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text-white);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    }
+
+    body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(65, 54, 195, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(135, 163, 247, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+</style>
+<body>
+    <header>
+<div class="logo">
+    <img src="./imagens/logo.png" alt="SNCT 2025" />
+</div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="pesqui.html">Pesquisa</a></li>
+                <li><a href="quiz.html">Quiz Ético</a></li>
+                <li><a href="ia.html">Deepfakes</a></li>
+                <li><a href="emprego.html">Empregos</a></li>
+                <li><a href="det.html" class="active">Jogos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="vies" class="container">
+    <div class="header">
+        <h1>Teste o Viés Algorítmico</h1>
+        <p class="hero-subtitle">Experimente como IAs discriminam sem você perceber</p>
+    </div>
+
+    <div class="bias-game">
+        <div class="game-tabs">
+            <button class="tab-btn active" data-game="curriculo">Processo Seletivo</button>
+            <button class="tab-btn" data-game="emprestimo">Pedido de Empréstimo</button>
+        </div>
+
+        <!-- JOGO 1: CURRÍCULO -->
+        <div id="game-curriculo" class="game-content active">
+            <div class="game-intro">
+                <h3>🎯 Seu Desafio</h3>
+                <p>Você está se candidatando para uma vaga de Desenvolvedor Sênior. Preencha seus dados e veja se a "IA" aprova seu currículo.</p>
+                <p class="warning">⚠️ Baseado no caso real da Amazon (2018)</p>
+            </div>
+
+            <div class="form-container">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label>Universidade</label>
+                    <select id="universidade">
+                        <option value="">Selecione...</option>
+                        <option value="usp">USP</option>
+                        <option value="unicamp">UNICAMP</option>
+                        <option value="ufrj">UFRJ</option>
+                        <option value="ufmg">UFMG</option>
+                        <option value="mackenzie">Mackenzie</option>
+                        <option value="puc">PUC</option>
+                        <option value="unigranrio">UniGranRio (Feminina)</option>
+                        <option value="hunter">Hunter College (EUA - Feminina)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Experiência Profissional</label>
+                    <textarea id="experiencia" rows="4" placeholder="Descreva sua experiência... (ex: 'Participei do time feminino de programação competitiva')"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Habilidades Técnicas</label>
+                    <div class="skills-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="python"> Python
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="javascript"> JavaScript
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="java"> Java
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="react"> React
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="aws"> AWS
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Atividades Extracurriculares</label>
+                    <textarea id="atividades" rows="3" placeholder="Ex: Capitã do time de xadrez feminino, voluntária em ONG para mulheres na tecnologia..."></textarea>
+                </div>
+
+                <button id="submitCurriculo" class="btn btn-large">Enviar Currículo</button>
+            </div>
+
+            <div id="resultCurriculo" class="game-result">
+                <!-- Resultado aparece aqui -->
+            </div>
+        </div>
+
+        <!-- JOGO 2: EMPRÉSTIMO -->
+        <div id="game-emprestimo" class="game-content">
+            <div class="game-intro">
+                <h3>🏦 Seu Desafio</h3>
+                <p>Você precisa de um empréstimo de R$ 50.000 para abrir seu negócio. Preencha o formulário e veja se a "IA do banco" aprova.</p>
+                <p class="warning">⚠️ Baseado em casos reais de discriminação financeira</p>
+            </div>
+
+            <div class="form-container">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="nomeEmp" placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label>CEP do Endereço</label>
+                    <input type="text" id="cep" placeholder="00000-000">
+                    <small>Alguns CEPs são automaticamente marcados como "alto risco"</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Renda Mensal</label>
+                    <input type="number" id="renda" placeholder="5000">
+                </div>
+
+                <div class="form-group">
+                    <label>Profissão</label>
+                    <select id="profissao">
+                        <option value="">Selecione...</option>
+                        <option value="engenheiro">Engenheiro</option>
+                        <option value="medico">Médico</option>
+                        <option value="professor">Professor</option>
+                        <option value="autonomo">Autônomo</option>
+                        <option value="artista">Artista</option>
+                        <option value="comerciante">Comerciante</option>
+                        <option value="motorista">Motorista</option>
+                        <option value="domestica">Empregada Doméstica</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Histórico de Crédito</label>
+                    <select id="credito">
+                        <option value="excelente">Excelente (Score 900+)</option>
+                        <option value="bom">Bom (Score 700-899)</option>
+                        <option value="regular">Regular (Score 500-699)</option>
+                        <option value="ruim">Ruim (Score < 500)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Possui Dependentes?</label>
+                    <select id="dependentes">
+                        <option value="nao">Não</option>
+                        <option value="1-2">Sim, 1-2</option>
+                        <option value="3+">Sim, 3 ou mais</option>
+                    </select>
+                </div>
+
+                <button id="submitEmprestimo" class="btn btn-large">Solicitar Empréstimo</button>
+            </div>
+
+            <div id="resultEmprestimo" class="game-result">
+                <!-- Resultado aparece aqui -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="./src/js/det.js"></script>
+
+      <footer>
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="pesqui.html">Pesquisa</a></li>
+    <li><a href="quiz.html">Quiz Ético</a></li>
+    <li><a href="ia.html">Deepfakes</a></li>
+    <li><a href="emprego.html">Empregos</a></li>
+    <li><a href="det.html">Jogos</a></li>
+    <li><a href="sobre.html">Sobre nosso Grupo</a></li>
+    <li><a href="fontes.html">Referências bibliográficas</a></li>
+  </ul>
+  <p>© 2025 SNCT | IA, Ética e Futuro do Trabalho</p>
+</footer>
+<script src="./src/js/fotter.js"></script>
+</body>
+</html>
+
+</body>
+</html>
